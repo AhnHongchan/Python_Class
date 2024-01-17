@@ -10,5 +10,3 @@ print(1 == True) # True
 print(1 is True) # "is" with a literal. Did you mean "=="?
 # 메모리 주소가 전혀 다름
 
-vowels = 'aeiou'
-print(('b' and 'a') in vowels)
