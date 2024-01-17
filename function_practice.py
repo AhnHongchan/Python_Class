@@ -20,4 +20,10 @@ numbers = input().split()
 
 print(numbers)
 
-map(int, numbers)
+result = list(map(int, numbers))
+
+print(result)
+
+result = list(map(int, input().split()))
+
+print(result)
