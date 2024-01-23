@@ -15,8 +15,8 @@
 # print(my_str.index('h')) # 0
 # print(my_str.index('z')) # ValueError: substring not found
 
-string1 = 'Hello'
-string2 = '12a3'
+# string1 = 'Hello'
+# string2 = '12a3'
 
-print(string1.isalpha())
-print(string2.isalpha())
+# print(string1.isalpha()) # True
+# print(string2.isalpha()) # False
