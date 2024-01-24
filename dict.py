@@ -38,9 +38,12 @@ person = {
 other_person = {'name' : 'Jane', 'gender': 'Female'}
 person.update(other_person)
 print(person)
-# {'name': 'Jane', 'age': 25, 'country': 'KOREA', 'gender': 'Female'}
+# {'name': 'Jane', 'age': 25, 'gender': 'Female'}
 person.update(age=50)
 print(person)
-# {'name': 'Jane', 'age': 50, 'country': 'KOREA', 'gender': 'Female'}
+# {'name': 'Jane', 'age': 50, 'gender': 'Female'}
 person.update(country = 'KOREA')
 print(person)
+# {'name': 'Jane', 'age': 50, 'gender': 'Female', 'country': 'KOREA'}
+
+

@@ -45,8 +45,9 @@
 # print(set1.issuperset(set2)) # False
 # print(set1.union(set2)) # {0, 1, 2, 3, 4, 5, 7, 9}
 
-print(hash(1)) # 1
-print(hash('a'))
+# print(hash(1)) # 1
+# print(hash('a'))
 # -3133287799518204883
 # -4076714354704769889
 # 3809319173521601395
+
