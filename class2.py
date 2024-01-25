@@ -18,4 +18,4 @@ print(p1.name) # unknown
 print(p2.name) # Kim
 
 p2.ssafy = 11
-print(p2.ssafy)
+print(p2.ssafy) # 11
