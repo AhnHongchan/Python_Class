@@ -228,6 +228,7 @@ def kfc(x, sum):
 
 kfc(x = 0, sum = 0)
 '''
+'''
 # 최종답안: 개수 출력
 path = []
 cnt = 0
@@ -237,7 +238,7 @@ def kfc(x, sum):
         return
 
     if x == 3:
-        # print(f'{path} = {sum}')
+        print(f'{path} = {sum}')
         cnt += 1
         return
     
@@ -248,3 +249,4 @@ def kfc(x, sum):
 
 kfc(x = 0, sum = 0)
 print(cnt)
+'''
