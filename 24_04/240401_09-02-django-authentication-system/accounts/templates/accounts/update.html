@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>회원정보 수정</h1>
-    <action="{% url 'accounts:update' %}" method="POST">
+    <form action="{% url 'accounts:update' %}" method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit">

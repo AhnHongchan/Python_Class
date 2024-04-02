@@ -28,7 +28,6 @@ def logout(request):
     auth_logout(request)
     return redirect('articles:index')
 
-@login_required
 def signup(request):
     if request.user.is_authenticated:
         return redirect('articles:index')
