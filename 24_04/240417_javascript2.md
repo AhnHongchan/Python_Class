@@ -122,7 +122,7 @@
  ![이미지](./images/capture_1342.PNG)
 
 ### Boolean
-True / False
+true / false
  - 조건문 또는 반복문에서 Boolean이 아닌 데이터 타입은 "자동 형변환 규칙"에 따라 true or false로 변환됨
 
 ### 자동 형변환
