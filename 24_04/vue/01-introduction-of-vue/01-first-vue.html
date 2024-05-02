@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- Vue가 무엇을 연결할 것인지 -->
+  <div id="app">
+    <h1>{{ message }}</h1>
+  <!-- Vue.js에서 이벤트 표시할 때 @를 이용한다. -->
+  <!-- v-on:click의 약어이다. -->
+    <button @click="count++">카운팅 : {{ count }}</button>
+  </div>
+  <!-- CND을 통해서 Vue 설치 -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    // 구조 분해 할당 (Destructuring Assignment)을 사용하여 
+    // 원하는 속성을 추출하여 변수에 할당한다.
+    // 코드를 간결하게 해주고 직관적으로 Vue 객체의 속성을 사용할 수 있게 한다.
+    // const createApp = Vue.createApp
+    // const ref = Vue.ref
+    const { createApp, ref } = Vue
+
+    // 하나의 Vue application을 만드는 과정
+    // 객체를 인자로 받음
+    // 아래에선 setup()이라는 함수를 객체로 받음
+    // setup: function() {} 과 동일
+    // 객체를 리턴한다. return {}
+
+    const app = createApp({
+      setup() {
+        // const의 재할당 불가를 막기 위해 ref를 사용한다.
+        const message = ref('Hello Vue!')
+        const count = ref(0)
+
+        return {
+          // message: message,
+          message,
+          count
+        }
+      }
+    })
+
+    // app.mount -> .mount 메서드를 이용하여 연결할 대상을 선택한다.
+    // mounting한다는 말로 씀
+    // 코드가 #app에 반영된다.
+    app.mount('#app')
+  </script>
+</body>
+
+</html>

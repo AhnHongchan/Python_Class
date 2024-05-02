@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- 템플릿에서 ref를 쓸 때는 .value를 쓸 필요 없음
+    자동적으로 unwrapped됨
+    {{ }} 중괄호 2개를 Mustache syntax(콧수염 구문)이라 하며 동적 테스트를 렌더링
+    <h1>{{ message.split('').reverse().join('') }}</h1> 이런 식으로 쓸 수 있음
+    !euV olleH 이렇게 나온다
+  -->
+    <h1>{{ message }}</h1>
+  </div>
+  <!-- 1. CDN 만들기 -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script>
+    // 2. 전역 Vue 객체
+    const { createApp, ref } = Vue
+    // 3. 앱이 1개라 그냥 app이라 씀
+    const app = createApp({
+      // createApp()에 전달되는 객체는 Vue 컴포넌트
+      // 컴포넌트의 상태는 setup() 함수 내에서 선언되어야 하며 객체를 반환해야함
+      setup() {
+        const message = ref('Hello Vue!')
+        // ref 객체임을 보여준다.
+        console.log(message)
+        // 객체의 실제 value 'Hello Vue!'를 보여준다.
+        console.log(message.value)
+        return {
+          message
+        }
+      }
+    })
+    // 하나의 앱에 한 번의 mount만 할 수 있음
+    app.mount('#app')
+  </script>
+</body>
+
+</html>
